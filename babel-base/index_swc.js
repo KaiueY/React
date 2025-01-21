@@ -1,6 +1,6 @@
 import swc from '@swc/core'
 
-const result = swc.transformFileSync('./test.js',{
+const result = swc.transformFileSync('./test.jsx',{
     jsc:{
         parser:{
             syntax:'ecmascript'
