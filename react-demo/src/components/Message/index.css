@@ -1,14 +1,44 @@
 .message {
     position: fixed;
     left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
+    transform: translate(-50%, 30px); /* 修改初始位置 */
+    top: 50px;
     min-width: 160px;
-    padding: 8px 16px;
+    padding: 4px 8px;
     background: white;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    animation: messageIn 0.3s ease-in-out forwards;
+    opacity: 0;
 }
+
+@keyframes messageIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 20px); /* 起始位置 */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 50px); /* 终点位置保持距离顶部30px */
+    }
+}
+
+@keyframes messageOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 50px); /* 起始位置保持距离顶部50px */
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 80px); /* 结束位置 */
+    }
+}
+
+.message.remove {
+    animation: messageOut 0.3s ease-in-out forwards;
+}
+
+
 
 .message-content {
     display: flex;

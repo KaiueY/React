@@ -54,11 +54,17 @@ const show = (type: MessageType, content: string) => {
         messageContainer,
         root
     })
+    
     setTimeout(() => {
         const item = queue.find(item => item.messageContainer === messageContainer)!
-        item.root.unmount()
-        document.body.removeChild(item.messageContainer)
-        queue.splice(queue.indexOf(item),1)
+        item.messageContainer.classList.add('remove')
+        
+        // 等待动画结束后移除元素
+        setTimeout(() => {
+            item.root.unmount()
+            document.body.removeChild(item.messageContainer)
+            queue.splice(queue.indexOf(item), 1)
+        }, 300)
     }, 2000)
 }
 
