@@ -15,7 +15,7 @@
 @keyframes messageIn {
     0% {
         opacity: 0;
-        transform: translate(-50%, 20px); /* 起始位置 */
+        transform: translate(-50%, 30px); /* 起始位置 */
     }
     100% {
         opacity: 1;
