@@ -2,17 +2,17 @@ import Card from "./components/Card";
 import './components/Message/index'; // 确保导入 Message 组件
 
 function App() {
-  const showErrorMessages = () ｛
+  const showErrorMessages = () =>{
     setTimeout(() => {
       window.Message?.error('发生错误！');
     }, 1000);
   };
-  const showSuccessMessages = () ｛
+  const showSuccessMessages = () =>{
     setTimeout(() => {
       window.Message?.success('操作成功！');
     }, 1000);
   };
-  const showTipMessages = () ｛
+  const showTipMessages = () =>{
     setTimeout(() => {
       window.Message?.warning('信息提示！');
     }, 1000);
