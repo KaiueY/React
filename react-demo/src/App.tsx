@@ -20,6 +20,13 @@ function App() {
   return (
     <div style={{ padding: '20px' }}>
       <Card />
+      <Card title={"I saw dragen too"}>
+        <div>
+          <section>
+              <i>kailin</i>
+          </section>
+        </div>
+      </Card>
       <div style={{ marginTop: '20px' }}>
         <button onClick={showErrorMessages}>
           错误提示
@@ -34,6 +41,7 @@ function App() {
       <button onClick={() => window.Message.warning('警告提示')}>
         警告提示
       </button>
+
     </div>
   );
 }
