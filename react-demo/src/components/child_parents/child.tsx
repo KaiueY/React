@@ -7,4 +7,4 @@ const  Child = ({ onSendData }) => {
     return <button onClick={clickHandler}>发送数据</button>;
   }
 
-  export default Child;
+  export default Child; 
